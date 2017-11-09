@@ -1,0 +1,24 @@
+{
+"name": "T1",
+"version": "1.0",
+"manifest_version": 2,
+"description": "关键词采集",
+"browser_action": {
+"default_icon": "icon/icon.png"
+},
+"permissions": [
+"webNavigation",
+"tabs",
+"contextMenus",
+"http://edc.boxintheship.com/collect/tools/tembin/keywordreceivedata"
+],
+"background": {
+"scripts": ["background.js","eventPage.js","jquery-3.2.1.min.js"]
+},
+"content_scripts": [
+{
+"matches": ["https://www.tembin.com/oldriver/keywords-analyzer/search?*"],
+"js": ["jquery-3.2.1.min.js", "contentscript.js"]
+}
+]
+}
