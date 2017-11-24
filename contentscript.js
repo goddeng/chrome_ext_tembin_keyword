@@ -38,7 +38,7 @@ function getListKeyword( sendResponse ){
   });
 
 	//chrome.extension.sendMessage({"orderInfo": orderInfo}, function(response) {});
-	if($("li.paginate_button.active").lenght>0){
+	if($("li.paginate_button.active").length>0){
 		page = parseInt($("li.paginate_button.active").text());
 	}
 	totalPage=getTotalPage();
@@ -46,7 +46,7 @@ function getListKeyword( sendResponse ){
 	if(page < totalPage && page < 100){
 		console.log("---------next-------");
 		sendMsg( listKeyword, "next" );
-			$("ul.pagination li").eq(5).find("a").append('<span id="next_page">next</span>');
+			$("ul.pagination li").eq(-2).find("a").append('<span id="next_page">next</span>');
 			$("#next_page").click();
 	}else{
 		console.log("---------end-------");
