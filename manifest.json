@@ -17,7 +17,7 @@
 },
 "content_scripts": [
 {
-"matches": ["https://www.tembin.com/oldriver/keywords-analyzer/search?*"],
+"matches": ["*://*/*"],
 "js": ["jquery-3.2.1.min.js", "contentscript.js"]
 }
 ]
