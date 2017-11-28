@@ -43,6 +43,7 @@ function getListKeyword( sendResponse ){
 	}
 	totalPage=getTotalPage();
 	console.log(page + "--page-----------totalPage---" + totalPage);
+	alert(page+"/"+totalPage);
 	if(page < totalPage && page < 100){
 		console.log("---------next-------");
 		sendMsg( listKeyword, "next" );
